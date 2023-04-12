@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs') %>
+
+<body ba>
+
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card">
+
+            <div class="card-header" style="color:darkblue;">
+                <h3>EDITAR PRODUTO</h3>
+                
+            </div>
+
+            <div class="card-body">
+
+                <form action="/editarProduto" method="post">
+
+                    <label for="nome_produto"></label>
+                    <input class="form-control" 
+                    type="text" 
+                    name="nome_produto" id="nome_produto"
+                    value="<%= produto.data.nome_produto %>" >
+
+                    <input type="hidden" 
+                    name="cod_produto"
+                    value="<%= produto.data.cod_produto %>">
+                    <br>
+
+                    <button class="btn btn-info">EDITAR</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<%- include('../partials/footer.ejs') %>
+
+</html>

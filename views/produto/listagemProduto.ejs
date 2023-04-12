@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs')%>
+
+<div class="container">
+
+    <%- include('../partials/menu.ejs')%>
+
+    <div class="card">
+        <div class="card-header" style="color:darkblue;"><h3>LISTAGEM DE PRODUTOS</h3></div>
+    </div>
+
+    <%
+    produtos.data.forEach(produto=>{
+    %>
+
+      <div class="card mt-2 p-1">
+
+        <div class="card-body">
+            <%= produto.nome_produto %>
+        </div>
+
+        <div class="btn-group mr-2">
+            <a href="/editarProduto/<%= produto.cod_produto%>" class="btn btn-outline-primary">EDITAR</a>
+            <a href="/excluirProduto/<%= produto.cod_produto%>" class="btn btn-outline-danger">EXCLUIR</a>
+        </div>
+
+      </div>
+        
+
+<% }) %>
+
+</div>
+
+
+   
+
+
+</body>
+
+<%- include('../partials/footer.ejs')%>
+
+</html>

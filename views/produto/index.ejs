@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs') %>
+
+<body>
+
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3 style="color: darkblue;">CADASTRO DE PRODUTO</h3>
+            </div>
+
+            <div class="card-body">
+
+                <form action="http://localhost:3000/cadastrarProduto" method="post">
+
+                    <label for="nome_produto"></label>
+                    <input class="form-control" type="text" 
+                    name="nome_produto" id="nome_produto"
+                    placeholder="NOME DO PRODUTO">
+                    <br><br>
+
+                    <button class="btn btn-info">CADASTRAR</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<%- include('../partials/footer.ejs') %>
+
+</html>
